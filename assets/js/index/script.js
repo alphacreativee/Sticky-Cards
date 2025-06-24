@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
         end: "top top",
         onUpdate: (self) => {
           const progress = self.progress;
-          gsap.set(cardImgWrapper, {
+          gsap.set(cardWrapper, {
             scale: 1 - progress * 0.25,
             opacity: 1 - progress,
           });
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
       trigger: card,
       start: "top top",
       onEnter: () => animateContentIn(cardTitleChars, cardDescription),
-      onLeave: () => animateContentOut(cardTitleChars, cardDescription),
+      onLeaveBack: () => animateContentOut(cardTitleChars, cardDescription),
     });
   });
   setupMarqueeAnimation();
